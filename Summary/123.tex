@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Summary of 1 Outage Probability of Millimeter Wave Cellular Uplink with Truncated Power Control}
+
+\date{October 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{url}
+\begin{document}
+
+\maketitle
+
+\section{Motivation}
+The millimeter wave (mmWave) frequencies provides a large available bandwidth, which is attractive for the 5G mobile networks. Meanwhile, recent studies shows that massive multiple-input-multiple-output (MIMO) is one of the key technologies to meet the basic requirement of 5G. In addition, mmWave combined with MIMO holds great potential fro providing the high data rate expected in the upcoming 5G cellular networks.
+\section{Outline}
+In the paper, a stochastic geometry framework for modeling and analyzing the uplink in single-tier and multi-tier mmWave cellular netorks are stated. The main outline of the paper is:
+
+\begin{itemize}
+\item[-] The system model of the uplink of a multi-tier mmWave cellular network with truncated channel inversion power control is presented.
+\item[-] The uplink modeling framework for a single-tier mmWave cellular network is presented.
+\item[-] The framework for the multi-tier mmWave cellular networks is developed.
+\item[-] A simplified system model is utilized to analyze the asymptotic behavior and performance in dense mmWave networks.
+\item[-] Numerical and simulation results
+\end{itemize}
+\section{System Model}
+\subsection{Network Model}
+The uplink of a K-tier mmWave cellular network and the SINR experienced by outdoor users served by outdoor mmWave Base Stations(BSs) are considered. For each tier's BSs, there are particularly spatial density, antenna gain, receiver sensitivity, blockage parameter and pathloss exponents. The outdoor BSs of each tier are spatially distributed according to an independent homogeneous Poisson point process (PPP). It is assumed that the density of the users is high enough such that each BS will have at least one user served per channel. Each BS serves a single user per channel, which is randomly selected from all the users located in its Voronoi cell by using a round-robin scheduler. The active users also form PPP even after associating just one user per BS. The probability of a communication link in the $K_{th}$ tier with length r being a LOS is $P(LOS_k) = e^{-βkr}$, while the probability of a link being NLOS is P(NLOS_k) = 1−P(LOS_k).
+
+\paragraph{\textit{ Note that PPP is explained in \url{https://en.wikipedia.org/wiki/Poisson_point_process}}}
+
+\subsection{Receiver Sensitivity and Truncated Outage}
+Each user associated with the $k_{th}$ tier adjusts its transmit power such that the average received signal at its serving mmWave BS is equal to a predefined threshold $\rho^k_o$, where $\rho^k_0 > \rho^k_{min}$. Moreover, as a result of the maximum transmit power constraint, users utilize
+a truncated channel inversion power control scheme, where the transmitters compensate for the pathloss in the link to the receiver to keep the average received signal power to the threshold $\rho^k_o$.
+
+\subsection{Beamforming Gain}
+The main lobe gain, side lobe gain and beamwidth of the users are $G^{max}_u$ ,$G^{min}_u$ and $\zetat$, respectively, while the corresponding parameters of the $k_{th}$ tier BS antennas are $G^{max}_{bk}$ , $G^{min}_{bk}$ and $\zeta_{rk}$, respectively. The probability distribution of discrete random variable is given as $a^j_v$ with probability $b^j_v$, which is shown in Figure 1.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{123.png}
+    \caption{The Probability Distribution of Discrete Random Variable}
+    \label{fig:label}
+\end{figure}
+
+\section{Uplink of Singel-Tier MmWave Cellular Networks}
+\subsection{MmWave Transmission Power Analysis}
+In mmWave cellular networks with truncated channel inversion power control and cutoff threshold $/rho_0$, the probability distribution function (PDF) of
+\section{Conclusion}
+``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\end{document}
+
+
